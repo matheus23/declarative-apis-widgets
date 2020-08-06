@@ -1,0 +1,10 @@
+{
+  "name": "declarative-apis-widgets",
+  "version": "1.0.0",
+  "description": "Interactive code widgets used in https://irreactive.com/declarative-apis",
+  "main": "src/Main.elm",
+  "repository": "https://github.com/matheus23/declarative-apis-widgets",
+  "author": "matheus23",
+  "license": "MIT",
+  "private": true
+}
