@@ -3,11 +3,9 @@ module Components.CodeInteractiveElm exposing (..)
 import Html exposing (..)
 import Html.Attributes exposing (class)
 import Html.Events as Events
-import Json.Decode as Decode
 import Language.Common as Common
 import Language.InteractiveElm exposing (..)
 import List.Extra as List
-import Maybe.Extra as Maybe
 import Result.Extra as Result
 import Svg exposing (Svg, svg)
 import TypedSvg.Attributes as SvgA
