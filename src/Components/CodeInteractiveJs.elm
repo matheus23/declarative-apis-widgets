@@ -7,7 +7,6 @@ import Json.Decode as Decode
 import Language.Common as Common
 import Language.InteractiveJs exposing (..)
 import List.Extra as List
-import Maybe.Extra as Maybe
 import Svg exposing (Svg, svg)
 import TypedSvg.Attributes as SvgA
 import TypedSvg.Attributes.InPx as SvgPx

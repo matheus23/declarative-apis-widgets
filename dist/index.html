@@ -1,18 +1,65 @@
 <html>
   <head>
+    <link rel="stylesheet" href="stylesheet.css" />
     <script src="elm.js"></script>
   </head>
 
   <body>
-    <div id="elm-main"></div>
+    <div id="js-interactive-example"></div>
+    <div id="elm-interactive-example"></div>
+    <div id="highlighting-example"></div>
     <script>
+      const jsExample = `moveTo(100, 100);
+setColor("red");
+circle(20);
+stroke();
+moveTo(200, 100);
+setColor("blue");
+rectangle(50, 30);
+fill();`;
+
+      const elmExample = `superimposed
+[ moved 200 100
+    (filled "blue" (rectangle 50 30))
+, moved 100 100
+    (outlined "red" (circle 20))
+]`;
+
+      const highlightingExample = `-- a list (array) of the numbers 1, 2, 3, 4:
+[1, 2, 3, 4]
+
+-- a function call, like to sin(10):
+sin 10
+
+-- a function call, like arcTan2(100, 20):
+arcTan2 100 20
+
+-- you can group arguments (expressions)
+-- with parenthesis:
+arcTan2 (sin 50) 10
+-- is like arcTan2(sin(50),10)
+`;
       Elm.Main.init({
-        node: document.querySelector("#elm-main"),
+        node: document.querySelector("#js-interactive-example"),
+        flags: {
+          language: "js interactive",
+          source: jsExample,
+        },
+      });
+
+      Elm.Main.init({
+        node: document.querySelector("#elm-interactive-example"),
         flags: {
           language: "elm interactive",
-          source: `moved 30 30
-    (filled "blue"
-        (circle 100))`,
+          source: elmExample,
+        },
+      });
+
+      Elm.Main.init({
+        node: document.querySelector("#highlighting-example"),
+        flags: {
+          language: "elm",
+          source: highlightingExample,
         },
       });
     </script>

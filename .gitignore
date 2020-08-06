@@ -1,4 +1,5 @@
 .vscode/
 elm-stuff/
 /dist/elm.js
+/dist/stylesheet.css
 node_modules/
